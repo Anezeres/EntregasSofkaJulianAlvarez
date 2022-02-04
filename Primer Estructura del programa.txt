@@ -1,0 +1,82 @@
+Clasificación de las naves espaciales
+
+1) vehículos lanzadera.
+2) naves no tripuladas o robóticas.
+3) naves espaciales tripuladas.
+
+
+VEHÍCULOS LANZADERA:
+
+Estos cohetes impulsores funcionan mediante combustible químico sólido o bien propelente líquido, o ambos.
+
+Nombre
+Nacionalidad o paises involucrados
+Empuje
+Peso
+Capacidad
+Potencia
+Altura
+Numero de motores
+Velocidad
+Mision
+
+
+Usaba petróleo refinado y oxígeno líquido como combustible
+dimetilhidracina y el óxido de nitrógeno,
+ propelente líquido,
+hidrógeno y el oxígeno.
+
+
+cañones electromagnéticos
+cohetes propulsados mediante combustión química
+
+
+NAVES ESPACIALES NO TRIPULADAS:
+
+objetivo estriba en estudiar otros cuerpos celestes.
+
+combustible químico sólido o bien propelente líquido
+
+monometilhidracina (MMH) y óxido nítrico
+empuje
+MMH y tetróxido de nitrógeno
+empuje principal de 45,39 kg
+pesa 258 kg
+hidracina como combustible.
+
+
+Saturno y sus lunas:  MMH y tetróxido de nitrógeno como combustible 7 años en llegar a su destino.
+Júpiter: llegará dentro de 1,6 millones de años. 4 millones de años
+Marte: nitrógeno comprimido; hidracina como combustible
+Mercurio:
+Plutón:
+Urano y Neptuno:
+Sol: 
+Venus: 
+
+NAVES ESPACIALES TRIPULADAS:
+
+reparación, mantenimiento o investigación
+mantenimiento de satélites, probar acoplamientos con otras naves y equipos electrónicos
+experimentación y estudio del comportamiento humano en condiciones ingrávidas y en el exterior de la cápsula
+
+orbitaba a 435 km.
+248,9 km de distancia
+orbitando a 386 km de distancia.
+
+NASA (EE.UU.), 
+la Agencia Espacial Federal Rusa (Rusia), 
+la Agencia Japonesa de Exploración Espacial (Japón), 
+la CSA (Canadá) y 
+la ESA (Europa).
+
+Capacidad 
+
+
+
+[
+Un apartado que me imprima todos los vehiculos creados
+Imprimir Misiones Actuales
+Imprimir 
+Crea un nuevo vehiculo
+Terminar]
