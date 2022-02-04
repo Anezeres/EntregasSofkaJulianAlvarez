@@ -60,7 +60,7 @@ public class USBMemory extends Product{
         super(nameOfProduct, brand, model, color, price, width, length, height, weight, discount, stock, units, description, specifications);
         this.storage = storage;
     }
-    
+
 
     /**
      * Metodos
