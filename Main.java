@@ -2,7 +2,18 @@ package EntregasSofkaJulianAlvarez;
 
 import java.util.Scanner;
 
+/**
+ * Esta es la clase principal que se encarga de ejecutar el programa.
+ */
+
 public class Main {
+
+    /**
+     * Esta funcion me ayuda a indentificar si el valor enviado por el usuario es un entero o no.
+     *
+     * @param answer -> Es una respuesta tipo String.
+     * @return -> Boolean, Que me indica si el String (answer) posee un valor de tipo entero.
+     */
 
 
     public static boolean isNumeric(String answer) {
@@ -19,7 +30,21 @@ public class Main {
         return result;
     }
 
-    public static String createSpacecraft(){
+    /**
+     * Esta funcion es la encargada de crear las naves espaciales.
+     * Primero le muestra al usuario una serie de opciones y si el valor enviado no coincide con las opciones
+     * se termina el programa
+     *
+     * Pide un valor, si no es de tipo numerico, envia un mensaje y vuelve a ejecutarce a si misma.
+     *
+     * si el valor es de tipo entero, evaluará si coincide con una de las 3 opciones, si no lo hace, envia un mensaje
+     * y vuelve a ejecutarse a si misma.
+     *
+     * si el valor coincide con una de las 3 opciones, creará un objeto de la opcion selecionada y ejecutará la funcion
+     * shuttle.printFeatures(); , encargada de pedirle los datos al ususario y mostrarlos.
+     */
+
+    public static void createSpacecraft(){
 
         System.out.println("#### Tenemos los siguientes tipos de naves espaciales ###");
 
@@ -95,12 +120,15 @@ public class Main {
 
         }else{
             System.out.println("Lo siento, el valor ingresado no es correcto");
+            createSpacecraft();
         }
 
-        return "a";
-
-
     }
+
+    /**
+     * Esta es la funcion principal que va a saludar al ususario y ejecutará la funcion que crea naves espaciales.
+     * @param args
+     */
 
     public static void main(String[] args) {
         System.out.println("#### Bienvenido al programa para crear naves espaciales ###");

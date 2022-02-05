@@ -1,6 +1,26 @@
 package EntregasSofkaJulianAlvarez;
 
+/**
+ * Esta funcion extiende de Spaceships e implementa de SpacecraftStructure
+ * ademas, es la encarga de crear naves de tipo Nave tripulada.
+ */
+
 public class MannedSpacecraft extends Spaceships implements SpacecraftStructure{
+
+    /**
+     * @param name Nombre de la nave espacial.
+     * @param type Tipo de nave espacial.
+     * @param nationality Nacionalidades involucradas en la mision.
+     * @param power Poder de la nave.
+     * @param capacity Capacidad de pasajeros en la mision.
+     * @param thrust Empuje de la nave.
+     * @param height Altura de la nave.
+     * @param numberOfMotors Numero de motores que posee la nave,
+     * @param speed Velocidad de la nave.
+     * @param mission Descripcion de la mision.
+     * @param destination Destino de la mision.
+     * @param fuel Combustible que usará la nave.
+     */
 
 
     public MannedSpacecraft(String name, String type, String nationality, double power, int capacity,
@@ -8,6 +28,11 @@ public class MannedSpacecraft extends Spaceships implements SpacecraftStructure{
                             String destination, String fuel) {
         super(name, type, nationality, power, capacity, thrust, height, numberOfMotors, speed, mission, destination, fuel);
     }
+
+    /**
+     * Esta funcion invoca la funcion generateSpacecraft() creando una nave llamada shuttle.
+     * Acto seguido, imprimirá la informacion y hará uso de las funciones de la interfaz.
+     */
 
     @Override
     public void printFeatures() {
@@ -29,8 +54,15 @@ public class MannedSpacecraft extends Spaceships implements SpacecraftStructure{
 
         spacecraftLiftoff(shuttle.getName());
         landSpacecraft(shuttle.getName());
+        congratulate(shuttle.getNationality());
 
     }
+
+    /**
+     * Esta funcion hará uso de la funciones creadas en la clase abstracta, enviando mensajes y si son de tipo numerico
+     * enviando el minimo para el funcionamiento de la nave.
+     * @return Devuelve una instancia de la clase MannedSpacecraft
+     */
 
     public MannedSpacecraft generateSpacecraft() {
 
@@ -68,15 +100,35 @@ public class MannedSpacecraft extends Spaceships implements SpacecraftStructure{
         return  newShuttleVehicle;
     }
 
+    /**
+     * Funcion encargada de indicar que la nave espacial despega.
+     * @param name nombre de la nave espacial
+     */
+
     @Override
     public void spacecraftLiftoff(String name) {
         System.out.println("La nave espacial tripulada llamada: " + name + " Ha despegado.");
     }
 
+    /**
+     * Funcion encargada de indicar que la nave espacial aterriza.
+     * @param name nombre de la nave espacial
+     */
+
     @Override
     public void landSpacecraft(String name) {
         System.out.println("La nave espacial tripulada llamada: " + name + " Ha aterrizado.");
         System.out.println("Los tripulantes se encuentran sanos y salvos.");
+    }
+
+    /**
+     * Funcion encargada de felicitar al creador de la nave espacial.
+     * @param nationality nombre de las naciones involucradas en la mision.
+     */
+
+    @Override
+    public void congratulate(String nationality) {
+        System.out.println(nationality + " Se sienten orgullosos de esta misión, todo fue un exito, la nave llegó en buenas condiciones.");
     }
 
 }
