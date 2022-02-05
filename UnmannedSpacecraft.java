@@ -29,6 +29,7 @@ public class UnmannedSpacecraft extends Spaceships implements SpacecraftStructur
 
         spacecraftLiftoff(shuttle.getName());
         landSpacecraft(shuttle.getName());
+        congratulate(shuttle.getNationality());
 
     }
 
@@ -75,6 +76,11 @@ public class UnmannedSpacecraft extends Spaceships implements SpacecraftStructur
     @Override
     public void landSpacecraft(String name) {
         System.out.println("La nave espacial no tripulada llamada: " + name + " Ha aterrizado.");
+    }
+
+    @Override
+    public void congratulate(String nationality) {
+        System.out.println(nationality + " Se sienten orgullosos de esta misión, todo fue un exito, la nave llegó en buenas condiciones.");
     }
 
 }

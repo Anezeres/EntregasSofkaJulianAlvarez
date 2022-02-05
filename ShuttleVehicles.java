@@ -31,6 +31,7 @@ public class ShuttleVehicles extends Spaceships implements SpacecraftStructure{
 
         spacecraftLiftoff(shuttle.getName());
         landSpacecraft(shuttle.getName());
+        congratulate(shuttle.getNationality());
 
     }
 
@@ -79,5 +80,10 @@ public class ShuttleVehicles extends Spaceships implements SpacecraftStructure{
     @Override
     public void landSpacecraft(String name) {
         System.out.println("La nave espacial de lanzadera llamada: " + name + " Ha aterrizado.");
+    }
+
+    @Override
+    public void congratulate(String nationality) {
+        System.out.println(nationality + " Se sienten orgullosos de esta misión, todo fue un exito.");
     }
 }
