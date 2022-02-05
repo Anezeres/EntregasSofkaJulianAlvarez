@@ -1,5 +1,7 @@
 package EntregasSofkaJulianAlvarez;
 
+import java.util.Scanner;
+
 public abstract class Spaceships {
 
     protected String name;
@@ -15,9 +17,86 @@ public abstract class Spaceships {
     protected String destination;
     protected String fuel;
 
+    public Spaceships(String name, String type, String nationality, double power, int capacity, double thrust,
+                      double height, int numberOfMotors, double speed, String mission, String destination, String fuel) {
+        this.name = name;
+        this.type = type;
+        this.nationality = nationality;
+        this.power = power;
+        this.capacity = capacity;
+        this.thrust = thrust;
+        this.height = height;
+        this.numberOfMotors = numberOfMotors;
+        this.speed = speed;
+        this.mission = mission;
+        this.destination = destination;
+        this.fuel = fuel;
+    }
+
+    public static boolean isNumeric(String answer) {
+
+        boolean result;
+
+        try {
+            Integer.parseInt(answer);
+            result = true;
+        } catch (NumberFormatException excepcion) {
+            result = false;
+        }
+
+        return result;
+    }
+
+    public static int stringToNumber(String string){
+        int number = Integer.parseInt(String.valueOf(string));
+        return number;
+    }
+
+    public static int numericalValues(String string, int max){
+
+        if(isNumeric(String.valueOf(string)) && stringToNumber(string) > 0 && stringToNumber(string) >= max) {
+            int number = stringToNumber(string);
+            return number;
+        }else if(isNumeric(String.valueOf(string)) && stringToNumber(string) > 0 && stringToNumber(string) < max){
+            System.out.println("Lo siento, para el correcto funcionamiento de la nave debe ser superior a " + max);
+            messageNumerical("Intentelo nuevamente",max);
+        }else if(isNumeric(String.valueOf(string)) && stringToNumber(string) < 0){
+            System.out.println("Lo siento, solo puede ingresar numeros positivos.");
+            messageNumerical("Intentelo nuevamente",max);
+
+        }else{
+            Scanner number = new Scanner(System.in);
+            String numberInputKeyboard = number.nextLine();
+            numericalValues(numberInputKeyboard, max);
+        }
+
+
+        return 0;
+    }
+
+    public static String messageString(String message){
+        System.out.println(message);
+        Scanner variable = new Scanner(System.in);
+        String variableInputKeyboard = variable.nextLine();
+        return variableInputKeyboard;
+    }
+
+    public static int messageNumerical(String message, int max){
+        System.out.println(message);
+        Scanner variable = new Scanner(System.in);
+        String variableInputKeyboard = variable.nextLine();
+        int numericalVariable = numericalValues(variableInputKeyboard, max);
+        return numericalVariable;
+    }
+
     /**
      * Metodos abstractos
      */
+
+    public abstract void printFeatures();
+
+
+
 
 
 
