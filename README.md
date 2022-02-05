@@ -3,13 +3,13 @@ Hola! Mi nombre es Julian Alexander Alvarez Payares, soy estudiante de primer se
 En este repositorio se encontraran la entregas de los talleres de Sofka, separados por medio de ramas.
 
 
-# RAMA = EntregaTaller1
+# RAMA2 = EntregaTaller2
 En esta rama posee los siguientes archivos
 
-- BankAccount.java.
-- Fruit.java.
 - Main.java.
-- Person.java.
-- Phone.java.
-- Product.java.
-- USBMemory.java.
+- MannedSpacecraft.java.
+- Primer Estructura del programa.txt.
+- ShuttleVehicles.java.
+- SpacecraftStructure.java.
+- Spaceships.java.
+- UnmannedSpacecraft.java.
