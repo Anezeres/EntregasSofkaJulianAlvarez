@@ -27,6 +27,9 @@ public class MannedSpacecraft extends Spaceships implements SpacecraftStructure{
         System.out.println("Destino: " + shuttle.destination);
         System.out.println("Combustible: " + shuttle.fuel);
 
+        spacecraftLiftoff(shuttle.getName());
+        landSpacecraft(shuttle.getName());
+
     }
 
     public MannedSpacecraft generateSpacecraft() {
@@ -63,6 +66,17 @@ public class MannedSpacecraft extends Spaceships implements SpacecraftStructure{
                 fuel);
 
         return  newShuttleVehicle;
+    }
+
+    @Override
+    public void spacecraftLiftoff(String name) {
+        System.out.println("La nave espacial tripulada llamada: " + name + " Ha despegado.");
+    }
+
+    @Override
+    public void landSpacecraft(String name) {
+        System.out.println("La nave espacial tripulada llamada: " + name + " Ha aterrizado.");
+        System.out.println("Los tripulantes se encuentran sanos y salvos.");
     }
 
 }

@@ -27,6 +27,9 @@ public class UnmannedSpacecraft extends Spaceships implements SpacecraftStructur
         System.out.println("Destino: " + shuttle.destination);
         System.out.println("Combustible: " + shuttle.fuel);
 
+        spacecraftLiftoff(shuttle.getName());
+        landSpacecraft(shuttle.getName());
+
     }
 
     public UnmannedSpacecraft generateSpacecraft() {
@@ -62,6 +65,16 @@ public class UnmannedSpacecraft extends Spaceships implements SpacecraftStructur
                 fuel);
 
         return  newShuttleVehicle;
+    }
+
+    @Override
+    public void spacecraftLiftoff(String name) {
+        System.out.println("La nave espacial no tripulada llamada: " + name + " Ha despegado.");
+    }
+
+    @Override
+    public void landSpacecraft(String name) {
+        System.out.println("La nave espacial no tripulada llamada: " + name + " Ha aterrizado.");
     }
 
 }

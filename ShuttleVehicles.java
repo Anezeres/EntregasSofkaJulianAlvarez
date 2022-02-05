@@ -29,6 +29,9 @@ public class ShuttleVehicles extends Spaceships implements SpacecraftStructure{
         System.out.println("Destino: " + shuttle.destination);
         System.out.println("Combustible: " + shuttle.fuel);
 
+        spacecraftLiftoff(shuttle.getName());
+        landSpacecraft(shuttle.getName());
+
     }
 
     public ShuttleVehicles generateSpacecraft() {
@@ -66,5 +69,15 @@ public class ShuttleVehicles extends Spaceships implements SpacecraftStructure{
                 );
 
         return  newShuttleVehicle;
+    }
+
+    @Override
+    public void spacecraftLiftoff(String name) {
+        System.out.println("La nave espacial de lanzadera llamada: " + name + " Ha despegado.");
+    }
+
+    @Override
+    public void landSpacecraft(String name) {
+        System.out.println("La nave espacial de lanzadera llamada: " + name + " Ha aterrizado.");
     }
 }
