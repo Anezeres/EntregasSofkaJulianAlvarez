@@ -6,16 +6,17 @@ import java.util.ArrayList;
  */
 public class Library {
      public ArrayList<Song> songList;
+
     /**
      * constructor de la clase
      */
     public Library() {
-         
+
     }
     /**
-    * metodo set de atributo lista musica
-    * @param songList 
-    */
+     * metodo set de atributo lista musica
+     * @param songList
+     */
     public Library(ArrayList<Song> songList) {
         this.songList = songList;
     }
@@ -27,11 +28,11 @@ public class Library {
     public void setSongList(ArrayList<Song> songList) {
         this.songList = songList;
     }
-       
+
     /**
      * Metodo lista que guarda los datos de las canciones
      */
-    public void lista(){
+    public void list(){
         ArrayList<Song> list = new ArrayList<>();
         Song song1 = new Song(
                 01,
@@ -247,31 +248,59 @@ public class Library {
                 "Esta cancion hace parte del album 'X100PRE'",
                 "src/EntregasSofkaJulianAlvarez/Images/X100PRE.jpg"
         );
-  
+
+
+        list.add(song1);
+        list.add(song2);
+        list.add(song3);
+        list.add(song4);
+        list.add(song5);
+        list.add(song6);
+        list.add(song7);
+        list.add(song8);
+        list.add(song9);
+        list.add(song10);
+        list.add(song11);
+        list.add(song12);
+        list.add(song13);
+        list.add(song14);
+        list.add(song15);
+        list.add(song16);
+        list.add(song17);
+        list.add(song18);
+        list.add(song19);
+        list.add(song20);
+
+        setSongList(list);
+    }
     
-      list.add(song1);
-      list.add(song2);
-      list.add(song3);
-      list.add(song4);
-      list.add(song5);
-      list.add(song6);
-      list.add(song7);
-      list.add(song8);
-      list.add(song9);
-      list.add(song10);
-      list.add(song11);
-      list.add(song12);
-      list.add(song13);
-      list.add(song14);
-      list.add(song15);
-      list.add(song16);
-      list.add(song17);
-      list.add(song18);
-      list.add(song19);
-      list.add(song20);
-      
-      setSongList(list);
-      //song1.songInfo(song1);
-        song8.songInfo(song8);
-}
+    /**
+     * metodo que filtra y guardaen una lista las canciones por año de lanzamiento
+     * @param date
+     * @return 
+     */
+    public ArrayList<Song> filterYear(int date) {
+        ArrayList<Song> listYear = new ArrayList<>();
+        for(Song song: this.songList) {
+            if(song.getDate() == date) {
+                listYear.add(song);
+            }
+        }
+        return listYear;
+    }
+    
+    /**
+     * metodo que filtra y guarda en una lista las canciones por genero musical
+     * @param gender
+     * @return 
+     */
+    public ArrayList<Song> filterGender(String gender) {
+        ArrayList<Song> listGender = new ArrayList<>();
+        for(Song song: this.songList) {
+            if(song.getGender().toLowerCase().equals(gender.toLowerCase())) {
+                listGender.add(song);
+            }
+        }
+        return listGender;
+    }
 }
