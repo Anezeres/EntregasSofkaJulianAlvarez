@@ -1,26 +1,27 @@
+
 package PlayList;
+
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 /**
  *
  * @author jhojan hoyos
  */
 public class Library {
-     public ArrayList<Song> songList;
+     private ArrayList<Song> songList;
+     private ArrayList<PlayList> playList;
 
     /**
      * constructor de la clase
      */
     public Library() {
-
+        this.playList = new ArrayList<>();
     }
     /**
-     * metodo set de atributo lista musica
-     * @param songList
+     * Getters and Setters de los atributos.
      */
-    public Library(ArrayList<Song> songList) {
-        this.songList = songList;
-    }
-
     public ArrayList<Song> getSongList() {
         return songList;
     }
@@ -29,6 +30,31 @@ public class Library {
         this.songList = songList;
     }
 
+    public ArrayList<PlayList> getPlayList() {
+        return playList;
+    }
+
+    public void setPlayList(ArrayList<PlayList> playList) {
+        this.playList = playList;
+    }
+    
+    /**
+     * Esta funcion me ayuda a indentificar si el valor enviado por el usuario es un entero o no.
+     *
+     * @param answer -> Es una respuesta tipo String.
+     * @return -> Boolean, Que me indica si el String (answer) posee un valor de tipo entero.
+     */
+    public static boolean isNumeric(String answer) {
+      boolean  result;
+      try {
+            Integer.parseInt(answer);
+              result = true;
+          } catch (NumberFormatException excepcion) {
+               result = false;
+        }
+
+        return result;
+    }
     /**
      * Metodo lista que guarda los datos de las canciones
      */
@@ -54,7 +80,7 @@ public class Library {
                 "Salsa",
                 2010,
                 "4:23",
-                "",
+                "Esta cancion hace parte del album 'Joe arroyo y la verdad'",
                 "src/EntregasSofkaJulianAlvarez/Images/JoeTalParaCual.jpg"
         );
 
@@ -65,7 +91,7 @@ public class Library {
                 "Salsa",
                 2010,
                 "3:39",
-                "dedicada a aquella persona que amas ",
+                "Esta cancion hace parte del album 'fuego",
                 "src/EntregasSofkaJulianAlvarez/Images/JoeTalParaCual.jpg"
         );
         Song song4 = new Song(
@@ -75,7 +101,7 @@ public class Library {
                 "Salsa",
                 2000,
                 "5:03",
-                "",
+                "Esta cancion hace parte del album 'Atrevido y diferente",
                 "src/EntregasSofkaJulianAlvarez/Images/Eddie.jpg"
         );
         Song song5 = new Song(
@@ -85,7 +111,7 @@ public class Library {
                 "Salsa",
                 2000,
                 "5:09",
-                "",
+                "Esta cancion hace parte del album 'Echo en Puerto Rico",
                 "src/EntregasSofkaJulianAlvarez/Images/willie-colon_idilio.jpg"
         );
         Song song6 = new Song(
@@ -95,7 +121,7 @@ public class Library {
                 "vallenato",
                 1984,
                 "3:51",
-                "",
+                "Esta cancion hace parte del album 'El mundo",
                 "src/EntregasSofkaJulianAlvarez/Images/Diomedez.jpg"
         );
         Song song7 = new Song(
@@ -105,7 +131,7 @@ public class Library {
                 "vallenato",
                 1996,
                 "4:22",
-                "",
+                "Esta cancion hace parte del album 'Siempre vallenato",
                 "src/EntregasSofkaJulianAlvarez/Images/Hermanos.jpg"
         );
         Song song8 = new Song(
@@ -115,7 +141,7 @@ public class Library {
                 "vallenato",
                 2010,
                 "4:23",
-                "",
+                "Esta cancion hace parte del album 'Cantinero",
                 "src/EntregasSofkaJulianAlvarez/Images/Silvestre.jpg"
         );
         Song song9 = new Song(
@@ -125,7 +151,7 @@ public class Library {
                 "vallenato",
                 2008,
                 "4:01",
-                "",
+                "Esta cancion hace parte del album 'El original'",
                 "src/EntregasSofkaJulianAlvarez/Images/Silvestre.jpg"
         );
         Song song10 = new Song(
@@ -135,14 +161,14 @@ public class Library {
                 "vallenato",
                 2008,
                 "4:01",
-                "",
+                "Esta cancion hace parte del album 'Unico'",
                 "src/EntregasSofkaJulianAlvarez/Images/Kaleth.jpg"
         );
 
         Song song11 = new Song(
                 11,
                 "Bad Bunny",
-                "TE MUDASTE",
+                "Te mudaste",
                 "Trap",
                 2020,
                 "2:10",
@@ -153,7 +179,7 @@ public class Library {
         Song song12 = new Song(
                 12,
                 "Bad Bunny",
-                "EL MUNDO ES MÍO",
+                "El mundo es mio",
                 "Trap",
                 2020,
                 "2:45",
@@ -164,7 +190,7 @@ public class Library {
         Song song13 = new Song(
                 13,
                 "Bad Bunny",
-                "HOY COBRÉ",
+                "Hoy cobre",
                 "Trap",
                 2020,
                 "2:10",
@@ -175,7 +201,7 @@ public class Library {
         Song song14 = new Song(
                 14,
                 "Bad Bunny",
-                "BOOKET T",
+                "Booker T",
                 "Trap",
                 2020,
                 "2:36",
@@ -186,7 +212,7 @@ public class Library {
         Song song15 = new Song(
                 15,
                 "Bad Bunny",
-                "DÁKITI",
+                "Dakiti",
                 "Trap",
                 2020,
                 "3:25",
@@ -197,7 +223,7 @@ public class Library {
         Song song16 = new Song(
                 16,
                 "Bad Bunny",
-                "NI BIEN NI MAL",
+                "Ni bien ni mal",
                 "Trap",
                 2018,
                 "3:56",
@@ -281,7 +307,7 @@ public class Library {
      */
     public ArrayList<Song> filterYear(int date) {
         ArrayList<Song> listYear = new ArrayList<>();
-        for(Song song: this.songList) {
+         for(Song song: this.songList) {
             if(song.getDate() == date) {
                 listYear.add(song);
             }
@@ -296,11 +322,79 @@ public class Library {
      */
     public ArrayList<Song> filterGender(String gender) {
         ArrayList<Song> listGender = new ArrayList<>();
-        for(Song song: this.songList) {
+         for(Song song: this.songList) {
             if(song.getGender().toLowerCase().equals(gender.toLowerCase())) {
                 listGender.add(song);
             }
         }
         return listGender;
     }
-}
+    
+     public void createPlayList(int number, String name, ArrayList<Song> newPlayList) {
+        
+        if (newPlayList.size() != 20) {
+           boolean encontro = false;
+             for(Song song: this.songList) {
+                if(song.getIdentifier() == number) {
+                    encontro = true;
+                    newPlayList.add(song);
+                }
+            }
+                if(!encontro) {
+                System.out.println("El valor, no se encuentra en la lista.");
+            }
+            
+            short option = 0;
+            Scanner newItem = new Scanner(System.in);
+                do {
+                System.out.println("1. Desea agregar otra cancion?");
+                System.out.println("2. Terminar");
+                System.out.println("Opcion:");
+                option = newItem.nextShort();
+                switch (option) {
+                    case 1:
+                        System.out.println("Ingrese el numero de la cancion que quiere añadir:");
+                        String newSongList= newItem.next();
+
+                        if(isNumeric(newSongList)){
+                            createPlayList(Integer.parseInt(newSongList),name,newPlayList);
+                            option = 2;
+                        } else {
+                            System.out.println("El valor ingresado no es numerico");
+                        }
+                        break;
+                        
+                    case 2:
+                        this.playList.add(new PlayList(name, newPlayList));
+                            System.out.println("Lista agregada");
+                        break;
+                    default:
+                            System.out.println("Opcion no valida");
+                        }
+                   } while(option != 2);
+                  } else{
+                System.out.println("Lo siento, la lista esta llena.");
+            }
+        }
+     
+     
+    /**
+     * metodo que enlista de manera ascendente las canciones de la biblioteca por duracion
+     * @return 
+     */
+     public ArrayList<Song> orderListDuration(){
+        ArrayList<Song> listDuration = (ArrayList<Song>) this.songList.clone();
+            Collections.sort(listDuration, new OrderPlayListDuration());
+                return listDuration;
+            }
+    /**
+     * metodo que enlista de manera ascendente las canciones de la biblioteca por año de lanzamiento
+     * @return 
+     */
+     public ArrayList<Song> orderListYear(){
+        ArrayList<Song> listYear = (ArrayList<Song>) this.songList.clone();
+            Collections.sort(listYear, new OrderPlayListAge());
+                return listYear;
+            }
+        
+      }
