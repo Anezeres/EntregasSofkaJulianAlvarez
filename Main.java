@@ -1,236 +1,183 @@
-package EntregasSofkaJulianAlvarez;
+package PlayList;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
+
+/**
+ *
+ * @author jhojan hoyos
+ */
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        File file = new File("src/EntregasSofkaJulianAlvarez/Images/JoeTalParaCual.jpg");
-        BufferedImage bufferedImage = ImageIO.read(file);
-        ImageIcon imageIcon = new ImageIcon(bufferedImage);
 
-        Song song1 = new Song(
-                01,
-                "Joe Arroyo",
-                "La Rebelión",
-                "Salsa",
-                2007,
-                "6:16",
-                "La rebelión describe el esclavismo despiadado y el poblamiento"
-                        + " de la calurosa Cartagena de Indias con esclavos "
-                        + "traídos del continente africano y su sometimiento sangriento.",
-                "src/EntregasSofkaJulianAlvarez/Images/JoeTalParaCual.jpg"
-        );
+    public static void main(String[] args) {
 
-        Song song2 = new Song(
-                2,
-                "Joe Arroyo",
-                "La Noche",
-                "Salsa",
-                2010,
-                "4:23",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/JoeTalParaCual.jpg"
-        );
-
-        Song song3 = new Song(
-                3,
-                "Joe Arroyo",
-                "Tania",
-                "Salsa",
-                2010,
-                "3:39",
-                "dedicada a aquella persona que amas ",
-                "src/EntregasSofkaJulianAlvarez/Images/JoeTalParaCual.jpg"
-        );
-        Song song4 = new Song(
-                4,
-                "Eddie Santiago",
-                "Que locura enamorarme de ti",
-                "Salsa",
-                2000,
-                "5:03",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/Eddie.jpg"
-        );
-        Song song5 = new Song(
-                5,
-                "Willie colon",
-                "idilio",
-                "Salsa",
-                2000,
-                "5:09",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/willie-colon_idilio.jpg"
-        );
-        Song song6 = new Song(
-                6,
-                "Diomedez Diaz",
-                "La rasquiñita",
-                "vallenato",
-                1984,
-                "3:51",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/Diomedez.jpg"
-        );
-        Song song7 = new Song(
-                7,
-                "Los hermanos Zuleta",
-                "Tu forma de amar",
-                "vallenato",
-                1996,
-                "4:22",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/Hermanos.jpg"
-        );
-        Song song8 = new Song(
-                8,
-                "Silvestre Dangoond",
-                "Del Ahogao, El Sombrero",
-                "vallenato",
-                2010,
-                "4:23",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/Silvestre.jpg"
-        );
-        Song song9 = new Song(
-                9,
-                "Silvestre Dangoond",
-                "La moza",
-                "vallenato",
-                2008,
-                "4:01",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/Silvestre.jpg"
-        );
-        Song song10 = new Song(
-                10,
-                "Kaleth Moarles",
-                "Ella es mi todo",
-                "vallenato",
-                2008,
-                "4:01",
-                "",
-                "src/EntregasSofkaJulianAlvarez/Images/Kaleth.jpg"
-        );
-
-        Song song11 = new Song(
-                11,
-                "Bad Bunny",
-                "TE MUDASTE",
-                "Trap",
-                2020,
-                "2:10",
-                "Esta cancion hace parte del album 'El ultimo tour del mundo'",
-                "src/EntregasSofkaJulianAlvarez/Images/ElUltimoTourDelMundo.jpg"
-        );
-
-        Song song12 = new Song(
-                12,
-                "Bad Bunny",
-                "EL MUNDO ES MÍO",
-                "Trap",
-                2020,
-                "2:45",
-                "Esta cancion hace parte del album 'El ultimo tour del mundo'",
-                "src/EntregasSofkaJulianAlvarez/Images/ElUltimoTourDelMundo.jpg"
-        );
-
-        Song song13 = new Song(
-                13,
-                "Bad Bunny",
-                "HOY COBRÉ",
-                "Trap",
-                2020,
-                "2:10",
-                "Esta cancion hace parte del album 'El ultimo tour del mundo'",
-                "src/EntregasSofkaJulianAlvarez/Images/ElUltimoTourDelMundo.jpg"
-        );
-
-        Song song14 = new Song(
-                14,
-                "Bad Bunny",
-                "BOOKET T",
-                "Trap",
-                2020,
-                "2:36",
-                "Esta cancion hace parte del album 'El ultimo tour del mundo'",
-                "src/EntregasSofkaJulianAlvarez/Images/ElUltimoTourDelMundo.jpg"
-        );
-
-        Song song15 = new Song(
-                15,
-                "Bad Bunny",
-                "DÁKITI",
-                "Trap",
-                2020,
-                "3:25",
-                "Esta cancion hace parte del album 'El ultimo tour del mundo'",
-                "src/EntregasSofkaJulianAlvarez/Images/ElUltimoTourDelMundo.jpg"
-        );
-
-        Song song16 = new Song(
-                16,
-                "Bad Bunny",
-                "NI BIEN NI MAL",
-                "Trap",
-                2018,
-                "3:56",
-                "Esta cancion hace parte del album 'X100PRE'",
-                "src/EntregasSofkaJulianAlvarez/Images/X100PRE.jpg"
-        );
-
-        Song song17 = new Song(
-                17,
-                "Bad Bunny",
-                "200 Mph",
-                "Trap",
-                2018,
-                "2:50",
-                "Esta cancion hace parte del album 'X100PRE'",
-                "src/EntregasSofkaJulianAlvarez/Images/X100PRE.jpg"
-        );
-
-        Song song18 = new Song(
-                18,
-                "Bad Bunny",
-                "Caro",
-                "Trap",
-                2018,
-                "3:49",
-                "Esta cancion hace parte del album 'X100PRE'",
-                "src/EntregasSofkaJulianAlvarez/Images/X100PRE.jpg"
-        );
-
-        Song song19 = new Song(
-                19,
-                "Bad Bunny",
-                "Solo de Mi",
-                "Trap",
-                2018,
-                "3:17",
-                "Esta cancion hace parte del album 'X100PRE'",
-                "src/EntregasSofkaJulianAlvarez/Images/X100PRE.jpg"
-        );
-
-        Song song20 = new Song(
-                20,
-                "Bad Bunny",
-                "La Romana",
-                "Trap",
-                2018,
-                "5:00",
-                "Esta cancion hace parte del album 'X100PRE'",
-                "src/EntregasSofkaJulianAlvarez/Images/X100PRE.jpg"
-        );
-
-
-        //song1.songInfo(song1);
-        song8.songInfo(song8);
+        System.out.println("***¡Bienvenido a nuestro programa de musica!***");
+        Library libreria = new Library();
+        libreria.list();
+        menu(libreria);
     }
-}
+    
+   
+     public static boolean isNumeric(String answer) {
+
+        boolean result;
+
+        try {
+            Integer.parseInt(answer);
+            result = true;
+        } catch (NumberFormatException excepcion) {
+            result = false;
+        }
+
+        return result;
+    }
+
+    public static void menu(Library library) {
+
+        System.out.println("#### ¿Que acción quieres realizar? ###");
+
+        System.out.println("1. Mostrar todas la canciones.");
+        System.out.println("2. Filtrar lista de canciones por año:");
+        System.out.println("3. Filtrar lista de canciones por genero:");
+        System.out.println("4. Crear PlayList:");
+        System.out.println("5. Ordenar lista por duración:");
+        System.out.println("6. Ordenar lista por año:");
+        System.out.println("7. Mostrar todas las playlist creadas");
+        System.out.println("Ingrese 8 u otro valor para finalizar.");
+        System.out.println("Introduzca su respuesta: ");
+        Scanner answer = new Scanner(System.in);
+        String inputKeyboard = answer.nextLine();
+
+
+     
+        if (isNumeric(String.valueOf(inputKeyboard))) {
+
+            int ship = Integer.parseInt(String.valueOf(inputKeyboard));
+
+                 if (ship == 1) {
+
+                    for(Song song : library.getSongList()){
+                    System.out.println(song.show());
+                }
+                System.out.println("\n");
+                menu(library);
+
+            } else if (ship == 2) {
+
+                System.out.println("Digite el año : ");
+                String year = answer.nextLine();
+
+                if(isNumeric(year)){
+                    ArrayList<Song> listForYear = library.filterYear(Integer.parseInt(year));
+                    if(listForYear.size() == 0) {
+                        System.out.println("No hay cancion de ese año");
+                    } else {
+                        for(Song song :  listForYear) {
+                            System.out.println(song.show());
+                        }
+                    }
+                    System.out.println("\n");
+                    menu(library);
+
+                    }else{
+                    System.out.println("Lo siento, no puede ingresar texto");
+                    System.out.println("\n");
+                    menu(library);
+                }
+
+            } else if (ship == 3) {
+
+                System.out.println("Tenemos los siguientes géneros:");
+                System.out.println("Trap");
+                System.out.println("Vallenato");
+                System.out.println("Salsa");
+                System.out.println("\n");
+
+
+                System.out.println("Digite el genero de musica que quiere escuchar ");
+                String gender = answer.nextLine();
+
+                if(! isNumeric(gender)){
+                    ArrayList<Song> listForGender = library.filterGender(gender);
+                     if(listForGender.size() == 0) {
+                        System.out.println("No existe cancion de este genero en la biblioteca");
+                    } else {
+                        for(Song song :  listForGender) {
+                            System.out.println(song.show());
+                        }
+                    }
+                    System.out.println("\n");
+                    menu(library);
+
+                }else{
+                    System.out.println("Lo siento, no pueden ingresar numeros");
+                    System.out.println("\n");
+                    menu(library);
+                }
+
+            } else if (ship == 4){
+                System.out.println("Usted ha escogido crear una PlayList:");
+                System.out.println("Ingrese el nombre de la PLayList");
+                Scanner answer2 = new Scanner(System.in);
+                String nameList = answer2.nextLine();
+
+                System.out.println("Ingrese el numero de la cancion que quiere añadir:");
+                String number = answer.nextLine();
+
+                if(isNumeric(number)){
+
+                    ArrayList<Song> PlayList = new ArrayList<>();
+
+                    library.createPlayList(Integer.parseInt(number),nameList,PlayList);
+
+                    System.out.println("\n");
+                    menu(library);
+
+                  }else{
+                    System.out.println("Lo siento, no puede ingresar texto");
+                    System.out.println("\n");
+                    menu(library);
+                }
+
+            }else if (ship == 5) {
+                ArrayList<Song> listDuration = library.orderListDuration();
+                   for(Song song : listDuration){
+                    System.out.println(song.showDuration());
+                }
+                System.out.println("\n");
+                menu(library);
+
+            }else if (ship == 6) {
+                ArrayList<Song> listYear = library.orderListYear();
+                   for(Song song : listYear){
+                    System.out.println(song.showYear());
+                }
+                System.out.println("\n");
+                menu(library);
+
+            } else if (ship == 7) {
+                ArrayList<PlayList> playList = library.getPlayList();
+                   for(PlayList list : playList){
+                        System.out.println("Lista: " + list.getNombre());
+                   for (Song song: list.getLista()) {
+                        System.out.println(song.show());
+                    }
+                        System.out.println("============================\n");
+                }
+                System.out.println("\n");
+                menu(library);
+            } else {
+                System.out.println("El programa ha finalizado, Valor ingresado -> " + ship);
+                System.out.println("\n");
+            }
+
+
+            } else {
+            System.out.println("Lo siento, el valor ingresado no es correcto");
+            System.out.println("\n");
+            menu(library);
+        }
+     }
+  }
