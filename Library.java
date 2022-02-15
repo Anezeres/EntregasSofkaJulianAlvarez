@@ -9,7 +9,7 @@ import java.util.Scanner;
  * La funcion de esta clase es generar una lista de 20 canciones, para poder realizar filtraciones con ellas.
  *
  * @version 1.0.0
- * 
+ *
  * @author Julian Alvarez
  * @author jhojan hoyos
  */
@@ -309,8 +309,8 @@ public class Library {
     }
     
     /**
-     * metodo que filtra y guardaen una lista las canciones por año de lanzamiento
-     * @param date
+     * metodo que filtra y guardan una lista las canciones por año de lanzamiento
+     * @param date año que se quiere filtrar
      * @return 
      */
     public ArrayList<Song> filterYear(int date) {
@@ -325,7 +325,7 @@ public class Library {
     
     /**
      * metodo que filtra y guarda en una lista las canciones por genero musical
-     * @param gender
+     * @param gender genero de la cancion que quiere filtrar.
      * @return 
      */
     public ArrayList<Song> filterGender(String gender) {
@@ -337,6 +337,14 @@ public class Library {
         }
         return listGender;
     }
+
+    /**
+     * Este metodo es el encargado de generar una playList
+     *
+     * @param number numero de la cancion, de 1 - 20
+     * @param name Nombre de la cancion.
+     * @param newPlayList PlayList
+     */
     
      public void createPlayList(int number, String name, ArrayList<Song> newPlayList) {
         
