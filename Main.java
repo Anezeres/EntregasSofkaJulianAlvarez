@@ -44,6 +44,11 @@ public class Main {
         return result;
     }
 
+    /**
+     * Este metodo es el encargado de pedirle al usuario por consola las opciones que quiere realizar
+     * @param library Al crear una libreria se le envian todas las canciones que hay.
+     */
+
     public static void menu(Library library) {
 
         System.out.println("#### ¿Que acción quieres realizar? ###");
