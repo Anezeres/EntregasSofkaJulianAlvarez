@@ -1,10 +1,14 @@
 
-package PlayList;
+package EntregasSofkaJulianAlvarez;
 
 import java.util.ArrayList;
 
 /**
+ * Esta clase es la encargada de generar una playlist con nombre y sus canciones.
  *
+ * @version 1.0.0
+ *
+ * @author Julian Alvarez
  * @author jhojan hoyos
  */
 public class PlayList {
@@ -14,8 +18,8 @@ public class PlayList {
     
     /**
      * constructor de la clase Playlist
-     * @param nombre
-     * @param lista 
+     * @param nombre indica el nombre de la PLayList
+     * @param lista Representa la lista de canciones.
      */
     public PlayList(String nombre, ArrayList<Song> lista) {
         this.nombre = nombre;

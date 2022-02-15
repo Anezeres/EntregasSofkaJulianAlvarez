@@ -1,11 +1,15 @@
 
-package PlayList;
+package EntregasSofkaJulianAlvarez;
 
 import java.util.Comparator;
 
 /**
+ * Este apartado se encarga de ordenar la lista de 20 canciones por duración de menor a mayor.
  *
- * @author tatiana
+ * @version 1.0.0
+ *
+ * @author Julian Alvarez
+ * @author jhojan hoyos
  */
 public class OrderPlayListDuration implements Comparator<Song>{
 

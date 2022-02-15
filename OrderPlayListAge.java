@@ -1,10 +1,15 @@
 
-package PlayList;
+package EntregasSofkaJulianAlvarez;
 
 import java.util.Comparator;
 
 /**
  *
+ * Este apartado se encarga de ordenar la lista de 20 canciones por año de menor a mayor.
+ *
+ * @version 1.0.0
+ *
+ * @author Julian Alvarez
  * @author jhojan hoyos
  */
 public class OrderPlayListAge implements Comparator<Song>{

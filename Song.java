@@ -1,8 +1,12 @@
 
-package PlayList;
+package EntregasSofkaJulianAlvarez;
 
 /**
+ * Esta clase es la encargada de generar canciones para ser incluidas en la lista.
  *
+ * @version 1.0.0
+ *
+ * @author Julian Alvarez
  * @author jhojan hoyoa
  */
 public class Song {

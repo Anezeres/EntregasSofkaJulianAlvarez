@@ -1,12 +1,17 @@
-package PlayList;
+package EntregasSofkaJulianAlvarez;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
 /**
+ * El objetivo de esta clase es ejecutar el programa y mostrarle al usuario el menú.
  *
+ * @version 1.0.0
+ *
+ * @author Julian Alvarez
  * @author jhojan hoyos
+ *
  */
 public class Main {
 
@@ -18,8 +23,13 @@ public class Main {
         libreria.list();
         menu(libreria);
     }
-    
-   
+
+    /**
+     * Esta funcion me ayuda a indentificar si el valor enviado por el usuario es un entero o no.
+     *
+     * @param answer -> Es una respuesta tipo String.
+     * @return -> Boolean, Que me indica si el String (answer) posee un valor de tipo entero.
+     */
      public static boolean isNumeric(String answer) {
 
         boolean result;

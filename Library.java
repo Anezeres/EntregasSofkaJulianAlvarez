@@ -1,12 +1,16 @@
 
-package PlayList;
+package EntregasSofkaJulianAlvarez;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
 /**
+ * La funcion de esta clase es generar una lista de 20 canciones, para poder realizar filtraciones con ellas.
  *
+ * @version 1.0.0
+ * 
+ * @author Julian Alvarez
  * @author jhojan hoyos
  */
 public class Library {
@@ -19,6 +23,8 @@ public class Library {
     public Library() {
         this.playList = new ArrayList<>();
     }
+
+
     /**
      * Getters and Setters de los atributos.
      */
@@ -37,6 +43,8 @@ public class Library {
     public void setPlayList(ArrayList<PlayList> playList) {
         this.playList = playList;
     }
+
+
     
     /**
      * Esta funcion me ayuda a indentificar si el valor enviado por el usuario es un entero o no.
