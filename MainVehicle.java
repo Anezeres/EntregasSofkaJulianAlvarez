@@ -44,8 +44,8 @@ public class MainVehicle {
         Scanner answer = new Scanner(System.in);
         ArrayList<Vehicle> list = new ArrayList<>();
 
-        System.out.println("Bienvenido al programa que registra autos.");
-        System.out.println("¿Cuantos autos quieres registrar?");
+        System.out.println("Bienvenido al programa que registra Carros, Motos y Lanchas.");
+        System.out.println("¿Cuantos vehiculos quieres registrar?");
 
         String numberOfVehicles = answer.nextLine();
 

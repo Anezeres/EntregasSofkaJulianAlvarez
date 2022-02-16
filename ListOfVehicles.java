@@ -26,7 +26,7 @@ public class ListOfVehicles {
      */
 
     public Vehicle generateVehicle(int optionTypeAuto,String text) {
-        System.out.println("#####Estas generando un nuevo automovil####");
+        System.out.println("#####Estas generando un nuevo vehiculo####");
 
         Scanner answer = new Scanner(System.in);
 
@@ -39,37 +39,38 @@ public class ListOfVehicles {
             System.out.println("Ingrese el numero de pasajeros actuales:");
             String currentPassengers = answer.nextLine();
 
-            if (isNumeric(currentPassengers)) {
-                System.out.println("Ingrese el numero ruedas que posee" + text +":");
-                String numberOfWheels = answer.nextLine();
-
-                if (isNumeric(numberOfWheels)) {
-                    System.out.println("Ingrese la placa de" + text + ":");
+                if (isNumeric(currentPassengers)) {
+                    System.out.println("Ingrese la placa de " + text + ":");
                     String vehiclePlate = answer.nextLine();
-                    System.out.println("Ingrese la ciudad de expedición de" + text +":");
+                    System.out.println("Ingrese la ciudad de expedición de " + text +":");
                     String cityOfPlate = answer.nextLine();
-                    System.out.println("Ingrese la marca de" + text + ":");
+                    System.out.println("Ingrese la marca de " + text + ":");
                     String brand = answer.nextLine();
-                    System.out.println("Ingrese el modelo de"+ text +":");
+                    System.out.println("Ingrese el modelo de "+ text +":");
                     String model = answer.nextLine();
 
-                    System.out.println("Ingrese el año de"+ text + ":");
+                    System.out.println("Ingrese el año de "+ text + ":");
                     String yearOfManufacture = answer.nextLine();
 
                     if (isNumeric(yearOfManufacture)) {
-                        System.out.println("Ingrese el color de"+ text +":");
+                        System.out.println("Ingrese el color de "+ text +":");
                         String color = answer.nextLine();
-                        System.out.println("Ingrese los kilometros recorridos de" + text + " (Sin decimales):");
+                        System.out.println("Ingrese los kilometros recorridos de " + text + " (Sin decimales):");
                         String kilometersTraveled = answer.nextLine();
 
                         if (isNumeric(kilometersTraveled) && Integer.parseInt(kilometersTraveled) >= 0) {
 
                                 if(optionTypeAuto == 1){
 
-                                    System.out.println("Ingrese el numero de puertas que posee" + text + ":");
+                                    System.out.println("Ingrese el numero de puertas que posee " + text + ":");
                                     String numberOfDoors = answer.nextLine();
 
-                                    if(isNumeric(numberOfDoors)){
+                                    System.out.println("Ingrese el numero ruedas que posee " + text +":");
+                                    String numberOfWheels = answer.nextLine();
+
+                                    if(isNumeric(numberOfDoors) && isNumeric(numberOfWheels)){
+
+
 
                                         vehicle = new Automovil(
                                                 Integer.parseInt(numberOfPassengers),
@@ -97,7 +98,7 @@ public class ListOfVehicles {
                                     vehicle = new Moto(
                                             Integer.parseInt(numberOfPassengers),
                                             Integer.parseInt(currentPassengers),
-                                            Integer.parseInt(numberOfWheels),
+                                            2,
                                             vehiclePlate,
                                             cityOfPlate,
                                             brand,
@@ -111,7 +112,7 @@ public class ListOfVehicles {
                                     vehicle = new Lancha(
                                             Integer.parseInt(numberOfPassengers),
                                             Integer.parseInt(currentPassengers),
-                                            Integer.parseInt(numberOfWheels),
+                                            0,
                                             vehiclePlate,
                                             cityOfPlate,
                                             brand,
@@ -142,12 +143,6 @@ public class ListOfVehicles {
                     System.out.println("\n");
                     generateVehicle(optionTypeAuto,text);
                 }
-            } else {
-                System.out.println("El valor ingresado no es correcto.");
-                System.out.println("Intentelo nuevamente.");
-                System.out.println("\n");
-                generateVehicle(optionTypeAuto,text);
-            }
         } else {
             System.out.println("El valor ingresado no es correcto.");
             System.out.println("Intentelo nuevamente.");
@@ -167,7 +162,7 @@ public class ListOfVehicles {
     public void generateVehicleList(ArrayList<Vehicle> list,int numberOfVehicles){
 
         if(list.size() == numberOfVehicles ){
-            System.out.println("Perfecto, has creado los autos.");
+            System.out.println("Perfecto, has creado los vehiculos.");
             System.out.println("\n");
             System.out.println("Aquí está la información ingresada=");
             System.out.println("\n");
@@ -194,7 +189,7 @@ public class ListOfVehicles {
 
                 if(option == 1) {
 
-                    Vehicle vehicle = newList.generateVehicle(option,"el Carro");
+                    Vehicle vehicle = newList.generateVehicle(option,"el carro");
                     list.add(vehicle);
                     newList.generateVehicleList(list, numberOfVehicles);
 
