@@ -1,11 +1,11 @@
 package EntregasSofkaJulianAlvarez;
 
 /**
- * El objetivo de esta clase abtracta es generar planeras
+ * El objetivo de esta clase abtracta es generar planetas
  *
  * @version 1.0.0
  *
- * @author jhojan hoyos
+ * @author Julian Alvarez
  *
  */
 
