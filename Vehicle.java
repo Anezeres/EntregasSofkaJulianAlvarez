@@ -9,7 +9,7 @@ package EntregasSofkaJulianAlvarez;
  *
  */
 
-public class Vehicle {
+public abstract class Vehicle {
     private int numberOfPassengers;
     private int currentPassengers;
     private int numberOfWheels;
@@ -152,19 +152,5 @@ public class Vehicle {
      */
 
     @Override
-    public String toString() {
-        return "Vehicle{" + "\n" +
-                "Numero de pasajeros= " + numberOfPassengers + " Pasajeros" + "\n" +
-                "Pasajeros Actuales= " + currentPassengers + " Pasajeros" + "\n" +
-                "Numero de ruedas= " + numberOfWheels + " Ruedas" + "\n" +
-                "Placa= " + vehiclePlate + "\n" +
-                "Ciudad de Expedición= " + cityOfPlate  + "\n" +
-                "Marca= " + brand + "\n" +
-                "Modelo= " + model  + "\n" +
-                "Año de Expedición= " + yearOfManufacture + "\n" +
-                "Color= " + color  + "\n" +
-                "Kilometros Recorridos= " + kilometersTraveled + " km"  + "\n" +
-                "Numero de Puertas= " + numberOfDoors + " Puertas" + "\n" +
-                '}';
-    }
+    public abstract String toString();
 }
