@@ -1,5 +1,14 @@
 package EntregasSofkaJulianAlvarez;
 
+/**
+ * El objetivo de esta clase es generar motos, extiende de Vehiculo.
+ *
+ * @version 1.0.0
+ *
+ * @author Julian Alvarez
+ *
+ */
+
 public class Moto extends Vehicle{
     /**
      * Este es el constructor de la clase vehiculo, encargada de generar los vehiculos.
@@ -22,6 +31,11 @@ public class Moto extends Vehicle{
         super(numberOfPassengers, currentPassengers, numberOfWheels, vehiclePlate, cityOfPlate,
                 brand, model, yearOfManufacture, color, kilometersTraveled, numberOfDoors);
     }
+
+    /**
+     * Este metodo se encarga de imprimir en pantalla toda la informacion ingresada por el usuario.
+     * @return Toda la informacion de cada auto.
+     */
 
     @Override
     public String toString() {
