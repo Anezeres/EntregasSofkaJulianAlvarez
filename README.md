@@ -34,3 +34,13 @@ En esta rama posee los siguientes archivos
 - OrderPlayListDuration.java
 - PlayList.java
 - Song.java
+
+# RAMA4 = EntregaTaller4.
+En esta rama posee las siguientes CARPETAS -> QUE CONTIENEN LOS EJERCICIO DEL TALLER 4
+
+- Ejercicio 1 
+- Ejercicio 2 
+- Ejercicio 3
+- Ejercicio 4
+- Ejercicio 5
+- Ejercicio 6
