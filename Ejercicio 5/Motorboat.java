@@ -1,7 +1,7 @@
 package EntregasSofkaJulianAlvarez;
 
 /**
- * El objetivo de esta clase es generar Carros, extiende de Vehiculo.
+ * El objetivo de esta clase es generar lanchas, extiende de Vehiculo.
  *
  * @version 1.0.0
  *
@@ -9,8 +9,7 @@ package EntregasSofkaJulianAlvarez;
  *
  */
 
-public class Automovil extends Vehicle{
-
+public class Motorboat extends Vehicle{
     /**
      * Este es el constructor de la clase vehiculo, encargada de generar los vehiculos.
      *
@@ -26,11 +25,11 @@ public class Automovil extends Vehicle{
      * @param kilometersTraveled Kilometros recorridos.
      * @param numberOfDoors      Numero de puertas.
      */
-    public Automovil(int numberOfPassengers, int currentPassengers, int numberOfWheels, String vehiclePlate,
+    public Motorboat(int numberOfPassengers, int currentPassengers, int numberOfWheels, String vehiclePlate,
                      String cityOfPlate, String brand, String model, int yearOfManufacture, String color,
                      int kilometersTraveled, int numberOfDoors) {
-        super(numberOfPassengers, currentPassengers, numberOfWheels, vehiclePlate, cityOfPlate, brand,
-                model, yearOfManufacture, color, kilometersTraveled, numberOfDoors);
+        super(numberOfPassengers, currentPassengers, numberOfWheels, vehiclePlate, cityOfPlate, brand, model,
+                yearOfManufacture, color, kilometersTraveled, numberOfDoors);
     }
 
     /**
@@ -40,7 +39,7 @@ public class Automovil extends Vehicle{
 
     @Override
     public String toString() {
-        return "Automovil{" + "\n" +
+        return "Lancha{" + "\n" +
                 "Numero de pasajeros= " + getNumberOfPassengers() + " Pasajeros" + "\n" +
                 "Pasajeros Actuales= " + getCurrentPassengers() + " Pasajeros" + "\n" +
                 "Numero de ruedas= " + getNumberOfWheels() + " Ruedas" + "\n" +

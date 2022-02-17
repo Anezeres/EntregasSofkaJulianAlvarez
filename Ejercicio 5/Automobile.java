@@ -1,7 +1,7 @@
 package EntregasSofkaJulianAlvarez;
 
 /**
- * El objetivo de esta clase es generar motos, extiende de Vehiculo.
+ * El objetivo de esta clase es generar Carros, extiende de Vehiculo.
  *
  * @version 1.0.0
  *
@@ -9,7 +9,8 @@ package EntregasSofkaJulianAlvarez;
  *
  */
 
-public class Moto extends Vehicle{
+public class Automobile extends Vehicle{
+
     /**
      * Este es el constructor de la clase vehiculo, encargada de generar los vehiculos.
      *
@@ -25,11 +26,11 @@ public class Moto extends Vehicle{
      * @param kilometersTraveled Kilometros recorridos.
      * @param numberOfDoors      Numero de puertas.
      */
-    public Moto(int numberOfPassengers, int currentPassengers, int numberOfWheels, String vehiclePlate,
-                String cityOfPlate, String brand, String model, int yearOfManufacture, String color,
-                int kilometersTraveled, int numberOfDoors) {
-        super(numberOfPassengers, currentPassengers, numberOfWheels, vehiclePlate, cityOfPlate,
-                brand, model, yearOfManufacture, color, kilometersTraveled, numberOfDoors);
+    public Automobile(int numberOfPassengers, int currentPassengers, int numberOfWheels, String vehiclePlate,
+                      String cityOfPlate, String brand, String model, int yearOfManufacture, String color,
+                      int kilometersTraveled, int numberOfDoors) {
+        super(numberOfPassengers, currentPassengers, numberOfWheels, vehiclePlate, cityOfPlate, brand,
+                model, yearOfManufacture, color, kilometersTraveled, numberOfDoors);
     }
 
     /**
@@ -39,7 +40,7 @@ public class Moto extends Vehicle{
 
     @Override
     public String toString() {
-        return "Moto{" + "\n" +
+        return "Automovil{" + "\n" +
                 "Numero de pasajeros= " + getNumberOfPassengers() + " Pasajeros" + "\n" +
                 "Pasajeros Actuales= " + getCurrentPassengers() + " Pasajeros" + "\n" +
                 "Numero de ruedas= " + getNumberOfWheels() + " Ruedas" + "\n" +
@@ -53,6 +54,4 @@ public class Moto extends Vehicle{
                 "Numero de Puertas= " + getNumberOfDoors() + " Puertas" + "\n" +
                 '}';
     }
-
-
 }

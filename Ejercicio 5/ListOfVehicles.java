@@ -72,7 +72,7 @@ public class ListOfVehicles {
 
 
 
-                                        vehicle = new Automovil(
+                                        vehicle = new Automobile(
                                                 Integer.parseInt(numberOfPassengers),
                                                 Integer.parseInt(currentPassengers),
                                                 Integer.parseInt(numberOfWheels),
@@ -95,7 +95,7 @@ public class ListOfVehicles {
 
 
                                 }else if(optionTypeAuto == 2){
-                                    vehicle = new Moto(
+                                    vehicle = new Motorcycle(
                                             Integer.parseInt(numberOfPassengers),
                                             Integer.parseInt(currentPassengers),
                                             2,
@@ -109,7 +109,7 @@ public class ListOfVehicles {
                                             0
                                     );
                                 }else{
-                                    vehicle = new Lancha(
+                                    vehicle = new Motorboat(
                                             Integer.parseInt(numberOfPassengers),
                                             Integer.parseInt(currentPassengers),
                                             0,
